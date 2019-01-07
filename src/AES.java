@@ -1,8 +1,8 @@
 
 /*
- * / O AES tem como principais características segurança, desempenho, facilidade de implementação, flexibilidade e exige
- * pouca memória,
- * Lucas Diogo França
+ * / O AES tem como principais caracterÃ­sticas seguranÃ§a, desempenho, facilidade de implementaÃ§Ã£o, flexibilidade e exige
+ * pouca memÃ³ria,
+ * Lucas Diogo FranÃ§a
  * 2016.2.0120.0023-5
  */
 
@@ -16,25 +16,24 @@ import javax.crypto.Cipher;
 
 public class AES {
 
-  static String bytes = "CMP1025SegTI2018"; // 16 caracteres
-  static String chave = "2018456789xwyzef"; // 16 caracteres
+  static String bytes = "CMP1025SegTI2018"; //16 caracteres
+  static String chave = "2018456789xwyzef"; //16 caracteres
 
   public static void main(String[] args) {
 
     try {
 
-      FileReader arq = new FileReader("D:\\desenv\\workspace\\Criptografia\\src\\texto.txt"); // Endereço do arquivo de
-      // texto que está no meu
-      // computador
+      FileReader arq = new FileReader("D:\\desenv\\workspace\\Criptografia\\src\\texto.txt"); // EndereÃ§o do arquivo de
+      // texto que estÃ¡ no meu computador
       BufferedReader lerArq = new BufferedReader(arq);
 
-      String linha = lerArq.readLine(); // Lê a primeira linha
+      String linha = lerArq.readLine(); // LÃª a primeira linha
       String txtArquivo = linha;
 
       while (linha != null) {
-        linha = lerArq.readLine(); // lê da segunda até a última linha
+        linha = lerArq.readLine(); // lÃª da segunda atÃ© a Ãºltima linha
         if (linha != null) {
-          txtArquivo = txtArquivo + linha; // Lê o arquivo e monta a string que vai ser criptografada
+          txtArquivo = txtArquivo + linha; // LÃª o arquivo e monta a string que vai ser criptografada
 
         }
       }
@@ -43,7 +42,7 @@ public class AES {
 
       System.out.println("Texto: " + txtArquivo);
 
-      // Passo o texto e a chave como parâmetro e recebo o texto criptografado
+      // Passo o texto e a chave como parÃ¢metro e recebo o texto criptografado
       byte[] textoencriptado = criptografar(txtArquivo, chave);
 
       System.out.print("Texto Criptografado: ");
